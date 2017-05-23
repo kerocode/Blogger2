@@ -1,15 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
+html {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  background: #fff;
+  color: #696969;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 .uk-navbar-container:not(.uk-navbar-transparent) {
   background: #363636;
 }
 
 .uk-navbar-nav>li>a {
-  color: #f5fafa;
+  color: #363636;
 }
 
 .uk-navbar-nav>li>a:hover,
 li.uk-active>a,
+li.active>a,
 .uk-navbar-nav>li>a:active {
   color: #DA4453!important;
+}
+
+.log-in {
+  background-color: #f95860;
+  color: #fff!important;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background-image: linear-gradient(100deg, #FE8155 0, #F95462 35%, #ED7AA3 100%);
 }

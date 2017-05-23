@@ -1,0 +1,60 @@
+<div class="uk-container" style="margin-top:20px; max-width:450px;">
+  <div class="uk-card uk-card-default uk-card-body uk-box-shadow-large">
+    <h1 class="uk-heading-line uk-text-center"><span style="color:#1e87f0;">Sign Up</span></h1>
+
+    <form class="uk-form-stacked" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">First Name</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="firstName">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('firstName')">
+            <p>first name is required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">Last Name</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="lastName">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('lastName')">
+            <p>last name is required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">Email</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-text" type="email" placeholder="" formControlName="email">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('email')">
+            <p>email is required</p>
+          </div>
+        </div>
+      </div>
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">Password</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="password">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('password')">
+            <p>password is required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-margin">
+        <label class="uk-form-label" for="form-stacked-text">Confirm Password</label>
+        <div class="uk-form-controls">
+          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="confirmPassword">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('confirmPassword')">
+            <p>ConfirmPassword is required</p>
+          </div>
+          <div class="uk-alert-danger" uk-alert *ngIf="form.hasError('misMatchedField') && form.controls['confirmPassword'].touched && form.controls['password'].touched">
+            <p>passwords do not match</p>
+          </div>
+        </div>
+      </div>
+      <button class="uk-button uk-box-shadow-small uk-box-shadow-hover-large uk-button-primary uk-width-1-1 uk-margin-small-bottom">Submit</button>
+    </form>
+  </div>
+</div>

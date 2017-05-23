@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-const CiscoSpark = require('ciscospark');
+
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
@@ -7,17 +7,9 @@ const CiscoSpark = require('ciscospark');
 })
 export class LogInComponent implements OnInit {
 
-  spark;
   constructor() { }
 
   ngOnInit() {
-    this.spark = CiscoSpark.init({
-      config: {
-        credentials: {
-          authorizeUrl: ''
-        }
-      }
-    });
   }
 
 }
