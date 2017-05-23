@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #363636;
+}
+
+.uk-navbar-nav>li>a {
+  color: #f5fafa;
+}
+
+.uk-navbar-nav>li>a:hover,
+li.uk-active>a,
+.uk-navbar-nav>li>a:active {
+  color: #DA4453!important;
+}

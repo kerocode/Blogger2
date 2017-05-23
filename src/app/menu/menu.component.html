@@ -1,0 +1,20 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+    <a class="uk-navbar-item uk-logo" href="#">Cisco Spark <span style="color: #DA4453;">ED</span></a>
+    <ul class="uk-navbar-nav">
+      <li class="uk-active"><a href="#">Home</a></li>
+      <li>
+        <a href="#">Parent</a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li [routerLinkActive]="['uk-active']"><a>Log in</a></li>
+            <li><a href="#">Item</a></li>
+            <li><a href="#">Item</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a [routerLink]="['/login']">Log in</a></li>
+    </ul>
+
+  </div>
+</nav>
