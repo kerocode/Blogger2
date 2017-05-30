@@ -6,8 +6,8 @@
       <div class="uk-margin">
         <label class="uk-form-label" for="form-stacked-text">First Name</label>
         <div class="uk-form-controls">
-          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="firstName">
-          <div class="uk-alert-danger" uk-alert *ngIf="isValid('firstName')">
+          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="FirstName">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('FirstName')">
             <p>first name is required</p>
           </div>
         </div>
@@ -16,8 +16,8 @@
       <div class="uk-margin">
         <label class="uk-form-label" for="form-stacked-text">Last Name</label>
         <div class="uk-form-controls">
-          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="lastName">
-          <div class="uk-alert-danger" uk-alert *ngIf="isValid('lastName')">
+          <input class="uk-input" id="form-stacked-text" type="text" placeholder="" formControlName="LastName">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('LastName')">
             <p>last name is required</p>
           </div>
         </div>
@@ -26,17 +26,17 @@
       <div class="uk-margin">
         <label class="uk-form-label" for="form-stacked-text">Email</label>
         <div class="uk-form-controls">
-          <input class="uk-input" id="form-stacked-text" type="email" placeholder="" formControlName="email">
-          <div class="uk-alert-danger" uk-alert *ngIf="isValid('email')">
-            <p>email is required</p>
+          <input class="uk-input" id="form-stacked-text" type="email" placeholder="" formControlName="Email">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('Email')">
+            <p> a valid Email address is required</p>
           </div>
         </div>
       </div>
       <div class="uk-margin">
         <label class="uk-form-label" for="form-stacked-text">Password</label>
         <div class="uk-form-controls">
-          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="password">
-          <div class="uk-alert-danger" uk-alert *ngIf="isValid('password')">
+          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="Password">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('Password')">
             <p>password is required</p>
           </div>
         </div>
@@ -45,16 +45,20 @@
       <div class="uk-margin">
         <label class="uk-form-label" for="form-stacked-text">Confirm Password</label>
         <div class="uk-form-controls">
-          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="confirmPassword">
-          <div class="uk-alert-danger" uk-alert *ngIf="isValid('confirmPassword')">
+          <input class="uk-input" id="form-stacked-text" type="password" placeholder="" formControlName="ConfirmPassword">
+          <div class="uk-alert-danger" uk-alert *ngIf="isValid('ConfirmPassword')">
             <p>ConfirmPassword is required</p>
           </div>
-          <div class="uk-alert-danger" uk-alert *ngIf="form.hasError('misMatchedField') && form.controls['confirmPassword'].touched && form.controls['password'].touched">
+          <div class="uk-alert-danger" uk-alert *ngIf="form.hasError('misMatchedField') && form.controls['ConfirmPassword'].touched && form.controls['Password'].touched">
             <p>passwords do not match</p>
           </div>
         </div>
       </div>
       <button class="uk-button uk-box-shadow-small uk-box-shadow-hover-large uk-button-primary uk-width-1-1 uk-margin-small-bottom">Submit</button>
+      <div style="margin:5% 35%;">
+        <hr class="uk-divider-small">
+      </div>
+      <p> if you already has account, you can <a [routerLink]="['/login']"> Log in</a> </p>
     </form>
   </div>
 </div>

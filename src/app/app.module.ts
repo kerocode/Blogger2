@@ -9,6 +9,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FooterComponent } from './footer/footer.component';
+import { OauthService } from './services/oauth.service';
 const routes: Routes = [
   { path: 'login', component: LogInComponent },
   { path: '', component: HomeComponent },
@@ -31,7 +32,7 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [OauthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
